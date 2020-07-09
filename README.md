@@ -1,2 +1,2 @@
-# naver_fullstack_boostcourse
+# FE/BE boostcourse
 fullstack boostcourse examples
