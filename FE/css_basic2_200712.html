@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body > div {
+            font-size: 32px;
+            background-color: #ff0;
+            font-family: monospace, sans-serif;
+        }
+        .myspan {
+            /* color: rgb(255, 0, 0); */
+            color: #ff0032;
+            /* 개발자도구에서 색상을 변경할 수 있음(styles 탭 ) */
+            font-size: 1em; 
+            /* 기준값 대비 상대크기적용 1 em 
+                그 기본값이라는건 상위 노드인 div의 font-size 가 32면 32로 받음 */
+        }
+    </style>
+</head>
+<body>
+    <div><span class="myspan">my text is upper! </span>
+    </div>
+    <!-- 유니코드를 사용한 아이콘 사용 -->
+    <div> 안녕하세요 &#x263a;</div>
+</body>
+</html>

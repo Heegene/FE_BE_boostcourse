@@ -10,6 +10,24 @@
             font-size:20px;
         }
         /* css는 inline이나internal 보다는 별도의 css파일로 관리하는 것이 좋음  */
+
+        /* css 상속 자손관계를 하나하나 지정하는 겨ㅑㅇ우  */
+        div ul li div p {
+            color: green;
+        }
+
+        div {
+            background-color: beige;
+            /* 이렇게 해도 div 아래에 있는 p, span 등까지도 모두 영향을 받음(상속) 
+                배치 관련된 속성은 상속을 받지 않음 */
+        }
+
+        body > div {
+            font-size:30px;
+            border: 2px solid salmon;
+            padding: 30px;
+            /* 그런데 border나 padding 같은 경우 그 밑의 자손들까지 inheritance가 일어나지 않음  */
+        }
     </style>
 
     <link rel="stylesheet" href="css_basic.css">
@@ -20,9 +38,21 @@
 <body>
 
     <div>
+        <span>my text is upper! </span>
         <p style="color:blue;"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta id, voluptatem, minus nesciunt optio accusamus esse doloribus eaque sint magni doloremque ducimus atque cumque quos autem minima impedit. Cum exercitationem veniam suscipit rerum nihil ab! Est doloremque, molestiae voluptates perspiciatis ipsam obcaecati similique voluptate necessitatibus vitae dolore facilis fuga nostrum?
 
         </p>
+    </div>
+
+    <div>
+        <ul>
+            <li>
+                <span>my text is dummy</span>
+                <div><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos corrupti pariatur architecto odio autem officiis corporis, excepturi iusto aliquid animi!</p></div>
+            </li>
+            <li></li>
+            <li></li>
+        </ul>
     </div>
     
 </body>
