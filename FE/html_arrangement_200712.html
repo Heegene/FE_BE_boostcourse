@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap {
+            position: relative;
+        }
+
+        .wrap > div {
+            width: 150px;
+            height: 100px;
+            border: 1px solid gray;
+            font-size: 0.7em;
+            text-align: center;
+            line-height: 100px;
+        }
+        .relative {
+            position: relative;
+            left: 10px;
+        }
+
+        .absolute {
+            position: absolute;
+            left: 130px;
+            top: 30px;
+        }
+
+        .fixed {
+            position: fixed;
+            top:250px;
+        }
+        .bottom {
+            margin-top: 300px;
+        }
+        .red {
+            background-color: red;
+            float:left;
+            
+
+        }
+        .green {
+            background-color: green;
+            position:relative;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="static">static (default)</div>
+        <div class="relative">relative(left: 10px)</div>
+        <div class="absolute"> absolute(left:130px; top:30px absolute는 top, left 있는게 좋음</div>
+        <div class="fixed bottom"> fixed(top:250px)</div>
+        <div class="red"></div>
+        <div class="green"></div>
+        <!-- float 기능은 레이아웃을 좌우로 잡을 때 사용함  -->
+        <!-- 
+            css 배치속성으로 조정할 수도 있는데,
+            element 간의 간격은 margin 으로 조정할 수 있고
+            element 안의 컨텐츠와 그 element가 가지고 있는 원래 크기 사이는 padding으로 조정
+            margin, border, padding, content 
+            element의 크기는 부모의 크기가 기본값으로 설정됨
+
+            box-sizing: content-box 라고 하면 박스의 크기를 지정해줄 수 있음 
+            content-box인 경우  padding 주면 박스가 커짐 
+
+         -->
+    </div>
+</body>
+</html>
